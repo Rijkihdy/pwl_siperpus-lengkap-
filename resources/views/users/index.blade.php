@@ -37,6 +37,7 @@
                         </x-slot>
 
                         @foreach ($users as $user)
+                        @if ($user->name !== 'pustakawan')
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
                                 <td>{{ $user->name }}</td>
@@ -53,6 +54,7 @@
                                     @endif
                                 </td>
                             </tr>
+                        @endif
                         @endforeach
                     </x-table>
 
